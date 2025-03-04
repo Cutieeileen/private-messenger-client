@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userViewRoleContainer"
+    android:background="@drawable/bg_oval_shape"
+    android:backgroundTint="@android:color/darker_gray"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <TextView
+            android:id="@+id/roleItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Роль"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/removeRoleButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/baseline_cancel_24"
+            app:layout_constraintBottom_toBottomOf="@+id/roleItemName"
+            app:layout_constraintStart_toEndOf="@+id/roleItemName"
+            app:layout_constraintTop_toTopOf="@+id/roleItemName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

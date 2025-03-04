@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etRegisterUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Имя пользователя"
+        android:layout_marginTop="48dp" />
+
+    <EditText
+        android:id="@+id/etRegisterInviteCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Код приглашения"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/etRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnLoginRedirect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="У меня есть аккаунт"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

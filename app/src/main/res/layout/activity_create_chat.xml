@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/chatDetailsToolbar"
+        layout="@layout/toolbar_chat_details"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAddedUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchUser" />
+
+    <Button
+        android:id="@+id/btnCreateChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать чат"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewAddedUsers" />
+
+    <EditText
+        android:id="@+id/etSearchUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Введите имя пользователя"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddUser"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnAddUser" />
+
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Добавить"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatDetailsToolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

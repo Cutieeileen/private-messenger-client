@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/chatDetailsToolbar"
+            layout="@layout/toolbar_chat_details"/>
+
+        <ImageView
+            android:id="@+id/chatDetailsIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatDetailsToolbar"
+            app:srcCompat="@drawable/baseline_supervised_user_circle_24" />
+
+        <TextView
+            android:id="@+id/chatViewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_oval_shape"
+            android:backgroundTint="#E1E2EC"
+            android:text="Имя чата"
+            app:layout_constraintEnd_toEndOf="@+id/chatDetailsIcon"
+            app:layout_constraintStart_toStartOf="@+id/chatDetailsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/chatDetailsIcon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatUsersList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_border"
+            app:layout_constraintBottom_toTopOf="@+id/addUserBtn"
+            app:layout_constraintEnd_toEndOf="@+id/chatViewUsername"
+            app:layout_constraintStart_toStartOf="@+id/chatViewUsername"
+            app:layout_constraintTop_toBottomOf="@+id/membersTw" />
+
+        <TextView
+            android:id="@+id/membersTw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Участники"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/chatViewUsername"
+            app:layout_constraintStart_toStartOf="@+id/chatViewUsername"
+            app:layout_constraintTop_toBottomOf="@+id/chatViewUsername" />
+
+        <ImageButton
+            android:id="@+id/addUserBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"
+            android:src="@drawable/baseline_add_box_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/membersTw"
+            app:layout_constraintStart_toStartOf="@+id/membersTw"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>

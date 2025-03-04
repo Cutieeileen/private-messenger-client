@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#DCF8C6" /> <!-- Цвет фона: светло-зеленый (или выбери свой) -->
+    <corners android:radius="16dp" /> <!-- Скругленные углы -->
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp" /> <!-- Внутренние отступы -->
+    <shadow
+        android:radius="4dp"
+        android:color="#66000000" /> <!-- Тень, чтобы добавить глубины -->
+</shape>

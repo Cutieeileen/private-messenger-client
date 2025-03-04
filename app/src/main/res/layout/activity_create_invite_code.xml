@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateInviteCodeActivity">
+
+    <include
+        android:id="@+id/adminToolbar"
+        layout="@layout/admin_toolbar"/>
+
+    <TextView
+        android:id="@+id/inviteCodeCreationRightsTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Права"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminToolbar" />
+
+    <ImageButton
+        android:id="@+id/adminAddRightsBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/baseline_add_box_24"
+        app:layout_constraintBottom_toBottomOf="@+id/inviteCodeCreationRightsTw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inviteCodeCreationRightsTw" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inviteCodeCreationRightsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviteCodeCreationRightsTw" />
+
+    <TextView
+        android:id="@+id/inviteCodeCreationRolesTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Роли"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviteCodeCreationRightsRecyclerView" />
+
+    <ImageButton
+        android:id="@+id/adminAddRoleBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/baseline_add_box_24"
+        app:layout_constraintBottom_toBottomOf="@+id/inviteCodeCreationRolesTw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inviteCodeCreationRolesTw" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inviteCodeCreationRolesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviteCodeCreationRolesTw" />
+
+    <Button
+        android:id="@+id/createInviteCodeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Создать код приглашения"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviteCodeCreationRolesRecyclerView" />
+
+    <EditText
+        android:id="@+id/inviteCodeCreationResultTw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createInviteCodeBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

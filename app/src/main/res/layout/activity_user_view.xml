@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/userViewToolbar"
+        layout="@layout/toolbar_user_view"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userViewToolbar"
+        app:srcCompat="@drawable/baseline_supervised_user_circle_24" />
+
+    <TextView
+        android:id="@+id/userViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Имя пользователя"
+        android:background="@drawable/bg_oval_shape"
+        android:backgroundTint="#E1E2EC"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/userViewUserDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Описание"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_oval_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/userViewUsername"
+        app:layout_constraintStart_toStartOf="@+id/userViewUsername"
+        app:layout_constraintTop_toBottomOf="@+id/userViewUsername" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRolesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintEnd_toEndOf="@+id/userViewUsername"
+        app:layout_constraintStart_toStartOf="@+id/userViewUsername"
+        app:layout_constraintTop_toBottomOf="@+id/userViewUserDescription" />
+
+    <ImageButton
+        android:id="@+id/addRoleToUserButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/baseline_add_box_24"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/usersRolesList"
+        app:layout_constraintStart_toEndOf="@+id/usersRolesList"
+        app:layout_constraintTop_toTopOf="@+id/usersRolesList" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

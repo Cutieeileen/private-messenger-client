@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_gravity="start"
+        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_message_received">
+
+    <!-- Горизонтальный контейнер для имени и роли -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <!-- Имя отправителя (меньше и сверху) -->
+        <TextView
+            android:id="@+id/senderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            android:text="Имя отправителя" />
+
+        <!-- Роль отправителя -->
+        <TextView
+            android:id="@+id/receivedSenderRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_oval_shape"
+            tools:text="Роль" />
+
+    </LinearLayout>
+
+
+
+        <!-- Сообщение -->
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:maxWidth="250dp"
+            android:padding="6dp" />
+
+        <!-- Время (меньше и снизу) -->
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="9sp"
+            android:layout_marginTop="2dp"
+            android:text="10:30" />
+
+    </LinearLayout>
+
+</RelativeLayout>

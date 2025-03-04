@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_bright"
+    android:elevation="4dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:titleTextColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Кнопка Назад -->
+        <ImageButton
+            android:id="@+id/btnAdminBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <!-- Название чата -->
+
+        <!-- Кнопка меню -->
+        <TextView
+            android:id="@+id/adminToolbarHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Меню администрирования"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAdminBack"
+            app:layout_constraintStart_toEndOf="@+id/btnAdminBack"
+            app:layout_constraintTop_toTopOf="@+id/btnAdminBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

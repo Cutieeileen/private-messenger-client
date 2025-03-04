@@ -1,0 +1,83 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'ru.anonymus.simplemessenger'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "ru.anonymus.simplemessenger"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.datastore.preferences.core.jvm
+    implementation libs.activity
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    // Retrofit для REST API
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+
+    // OkHttp для WebSocket
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    // Room для локальной БД
+    implementation 'androidx.room:room-runtime:2.5.0'
+    annotationProcessor 'androidx.room:room-compiler:2.5.0'
+
+    // ViewModel + LiveData
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.6.1'
+
+    // RecyclerView для списка сообщений
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Kotlin Coroutines (для асинхронных операций)
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+
+    implementation "androidx.security:security-crypto:1.1.0-alpha06"
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.18.2'
+
+    // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxandroid
+    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: '2.1.1'
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.2'
+    implementation 'com.github.naiksoftware:stompprotocolandroid:1.6.6'
+
+}
